@@ -1,0 +1,20 @@
+# Variables de entorno
+.env
+
+# Archivos subidos
+/uploads/*
+!/uploads/.htaccess
+!/uploads/default-avatar.jpg
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
