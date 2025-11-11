@@ -1,19 +1,29 @@
 <?php
-// Configuración de la base de datos
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root'); // Cambiar según tu configuración
-define('DB_PASS', ''); // Cambiar según tu configuración
-define('DB_NAME', 'thefacebook');
+// Cargar variables de entorno (sin Composer)
+require_once __DIR__ . '/load_env.php';
+loadEnv(__DIR__);
+
+// Configuración de la base de datos (desde .env)
+define('DB_HOST', env('DB_HOST', 'localhost'));
+define('DB_USER', env('DB_USER', 'root'));
+define('DB_PORT', env('DB_PORT', '3306'));
+define('DB_PASS', env('DB_PASS', ''));
+define('DB_NAME', env('DB_NAME', 'thefacebook'));
 
 // Configuración del sitio
-define('SITE_URL', 'http://localhost/thefacebook'); // Cambiar al dominio de producción
+define('SITE_URL', env('SITE_URL', 'http://localhost/thefacebook'));
 define('UPLOAD_PATH', __DIR__ . '/uploads/');
-define('MAX_FILE_SIZE', 5242880); // 5MB
+define('MAX_FILE_SIZE', env('MAX_FILE_SIZE', 5242880));
+
+// Crear carpeta de uploads si no existe
+if (!file_exists(UPLOAD_PATH)) {
+    mkdir(UPLOAD_PATH, 0777, true);
+}
 
 // Conectar a la base de datos
 function getDBConnection() {
     try {
-        $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
         
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -31,7 +41,7 @@ function startSecureSession() {
     if (session_status() === PHP_SESSION_NONE) {
         ini_set('session.cookie_httponly', 1);
         ini_set('session.use_only_cookies', 1);
-        ini_set('session.cookie_secure', 0); // Cambiar a 1 en producción con HTTPS
+        ini_set('session.cookie_secure', env('SESSION_SECURE', 0));
         session_start();
     }
 }
