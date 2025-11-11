@@ -1,0 +1,260 @@
+/* Estilo general inspirado en thefacebook original */
+body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.facebook-header {
+    background: linear-gradient(to bottom, #4267B2 0%, #3B5998 100%);
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #29487d;
+    margin-bottom: 0;
+}
+
+.header-icon {
+    float: left;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: normal;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.header-nav {
+    color: white;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 11px;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+.user-avatar {
+    color: white;
+    font-size: 11px;
+}
+
+.avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid white;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Sidebar */
+.sidebar-box, .login-sidebar {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.sidebar-box label, .login-sidebar label {
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.sidebar-box input, .login-sidebar input {
+    font-size: 11px;
+}
+
+.sidebar-box .btn, .login-sidebar .btn {
+    font-size: 11px;
+    padding: 3px 8px;
+}
+
+.sidebar-box ul {
+    padding-left: 0;
+}
+
+.sidebar-box ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.sidebar-box ul li a {
+    color: #3B5998;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.sidebar-box ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Content boxes */
+.welcome-box, .registration-box, .about-box, .profile-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.welcome-box h2, .registration-box h2, .about-box h2 {
+    color: #3B5998;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.welcome-box p, .registration-box p, .about-box p {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.welcome-box ul, .about-box ul {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Forms */
+.form-control {
+    font-size: 11px;
+}
+
+.form-control-sm {
+    font-size: 11px;
+}
+
+label {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.col-form-label {
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #3B5998;
+    border-color: #3B5998;
+}
+
+.btn-primary:hover {
+    background-color: #2d4373;
+    border-color: #2d4373;
+}
+
+.btn-secondary {
+    background-color: #999;
+    border-color: #999;
+}
+
+/* About page creators */
+.section-box {
+    margin-bottom: 30px;
+}
+
+.section-box h4 {
+    background-color: #3B5998;
+    color: white;
+    padding: 8px 15px;
+    margin: 0 -20px 20px -20px;
+    font-size: 12px;
+}
+
+.creator-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.creator-card h5 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.creator-card p {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.creator-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Profile */
+.profile-sidebar {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.profile-content .card {
+    border: 1px solid #ccc;
+}
+
+.profile-content .card-header {
+    background-color: #3B5998;
+    color: white;
+    font-size: 12px;
+}
+
+.profile-content table {
+    font-size: 11px;
+}
+
+/* Footer */
+.facebook-footer {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 10px;
+    color: #666;
+}
+
+.facebook-footer a {
+    color: #3B5998;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.facebook-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Alerts */
+.alert {
+    font-size: 11px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 18px;
+    }
+    
+    .header-nav {
+        font-size: 10px;
+    }
+}
