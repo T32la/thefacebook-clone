@@ -25,6 +25,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Manejar subida de avatar
+    // $avatar = $user['avatar'];
+    // if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+    //     $allowed = ['jpg', 'jpeg', 'png', 'gif'];
+    //     $filename = $_FILES['avatar']['name'];
+    //     $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+    //     if (!in_array($ext, $allowed)) {
+    //         $errors[] = "Invalid file type. Only JPG, PNG and GIF allowed.";
+    //     } elseif ($_FILES['avatar']['size'] > MAX_FILE_SIZE) {
+    //         $errors[] = "File too large. Maximum 5MB.";
+    //     } else {
+    //         $newFilename = 'avatar_' . $_SESSION['user_id'] . '_' . time() . '.' . $ext;
+    //         $uploadPath = UPLOAD_PATH . $newFilename;
+
+    //         if (move_uploaded_file($_FILES['avatar']['tmp_name'], $uploadPath)) {
+    //             // Eliminar avatar anterior si no es el default
+    //             if ($user['avatar'] !== 'default-avatar.jpg' && file_exists(UPLOAD_PATH . $user['avatar'])) {
+    //                 unlink(UPLOAD_PATH . $user['avatar']);
+    //             }
+    //             $avatar = $newFilename;
+    //         } else {
+    //             $errors[] = "Failed to upload avatar.";
+    //         }
+    //     }
+    // }
+
+    // Manejar subida de avatar
     $avatar = $user['avatar'];
     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
         $allowed = ['jpg', 'jpeg', 'png', 'gif'];
@@ -36,6 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($_FILES['avatar']['size'] > MAX_FILE_SIZE) {
             $errors[] = "File too large. Maximum 5MB.";
         } else {
+            // Verificar que la carpeta uploads existe
+            if (!file_exists(UPLOAD_PATH)) {
+                mkdir(UPLOAD_PATH, 0777, true);
+            }
+
             $newFilename = 'avatar_' . $_SESSION['user_id'] . '_' . time() . '.' . $ext;
             $uploadPath = UPLOAD_PATH . $newFilename;
 
@@ -46,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 $avatar = $newFilename;
             } else {
-                $errors[] = "Failed to upload avatar.";
+                $errors[] = "Failed to upload avatar. Check folder permissions.";
             }
         }
     }
