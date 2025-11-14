@@ -202,7 +202,179 @@ label {
     border-radius: 3px;
 }
 
-/* Profile */
+/* Profile Page Styles */
+.profile-header {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-header h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Quick Search Box */
+.quick-search-box {
+    background-color: #E8EAF6;
+    border: 1px solid #999;
+    padding: 0;
+}
+
+.search-header {
+    background-color: #3B5998;
+    color: white;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.quick-search-box input {
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+/* Sidebar Menu */
+.sidebar-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.sidebar-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-menu ul li a {
+    color: #3B5998;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.sidebar-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Boxes */
+.profile-box {
+    border: 1px solid #3B5998;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.profile-box-header {
+    background-color: #3B5998;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.profile-box-content {
+    background-color: #E8EAF6;
+    padding: 10px;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 2px solid #3B5998;
+}
+
+/* Connection Text */
+.connection-text {
+    font-size: 11px;
+    color: #333;
+    font-style: italic;
+}
+
+/* Information Tables */
+.info-section {
+    margin-bottom: 15px;
+}
+
+.info-section-title {
+    background-color: #FFFFFF;
+    color: #3B5998;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 5px 0;
+    border-bottom: 1px solid #3B5998;
+    margin-bottom: 8px;
+}
+
+.info-table {
+    width: 100%;
+    font-size: 11px;
+    border-collapse: collapse;
+}
+
+.info-table tr {
+    border-bottom: 1px dotted #ccc;
+}
+
+.info-table tr:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    width: 120px;
+    padding: 4px 8px 4px 0;
+    font-weight: bold;
+    color: #333;
+    vertical-align: top;
+}
+
+.info-value {
+    padding: 4px 0;
+    color: #3B5998;
+}
+
+.info-value a {
+    color: #3B5998;
+    text-decoration: none;
+}
+
+.info-value a:hover {
+    text-decoration: underline;
+}
+
+.info-bio {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+
+/* Sidebar Ad */
+.sidebar-ad {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+.ad-header {
+    background-color: #3B5998;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ad-content {
+    padding: 20px;
+    min-height: 200px;
+}
+
+/* Profile Sidebar (for other views) */
 .profile-sidebar {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -248,6 +420,41 @@ label {
     font-size: 11px;
 }
 
+/* Search Results */
+.search-results {
+    margin-top: 20px;
+}
+
+.search-result-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.search-result-item h5 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.search-result-item h5 a {
+    color: #3B5998;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-result-item h5 a:hover {
+    text-decoration: underline;
+}
+
+.search-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #3B5998;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .header-title {
@@ -257,4 +464,13 @@ label {
     .header-nav {
         font-size: 10px;
     }
+    
+    .search-avatar {
+        width: 60px;
+        height: 60px;
+    }
 }
+
+
+
+
