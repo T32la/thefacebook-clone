@@ -1,30 +1,36 @@
-<header class="facebook-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-2">
-                <div class="header-icon">
-                    <img src="images/face-icon.png" alt="Face" width="50" height="50">
-                </div>
+<header class="thefacebook-header">
+    <div class="header-container">
+        <!-- Columna Izquierda: Foto del creador -->
+        <div class="header-left-column">
+            <img src="src/img/fb.jpg" alt="thefacebook" class="header-face-photo">
+        </div>
+        
+        <!-- Columna Derecha: Logo + Navbar -->
+        <div class="header-right-column">
+            <!-- Logo en la parte superior -->
+            <div class="header-logo-wrapper">
+                <h1 class="header-logo">[ thefacebook ]</h1>
             </div>
             
-            <div class="col-md-7">
-                <h1 class="header-title">[ thefacebook ]</h1>
-            </div>
-            
-            <div class="col-md-3 text-right">
-                <nav class="header-nav">
-                    <a href="login.php">login</a>
-                    <a href="register.php">register</a>
-                    <a href="about.php">about</a>
+            <!-- Navbar en la parte inferior -->
+            <div class="header-navbar-wrapper">
+                <nav class="header-navbar">
+                    <a href="index.php">home</a>
+                    <a href="search.php">search</a>
+                    <a href="global.php">global</a>
+                    <a href="network.php">social net</a>
+                    <a href="invite.php">invite</a>
+                    <a href="faq.php">faq</a>
+                    <?php if (isLoggedIn()): ?>
+                        <a href="logout.php">logout</a>
+                    <?php else: ?>
+                        <a href="login.php">login</a>
+                        <a href="register.php">register</a>
+                        <a href="about.php">about</a>
+                    <?php endif; ?>
                 </nav>
-                <?php if (isLoggedIn()): ?>
-                    <div class="user-avatar mt-2">
-                        <img src="uploads/<?php echo htmlspecialchars($_SESSION['user_avatar']); ?>" 
-                             alt="Avatar" 
-                             class="avatar-small">
-                        <span><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
-                    </div>
-                <?php endif; ?>
+                
+ 
             </div>
         </div>
     </div>

@@ -10,6 +10,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 $stmt->close();
+$friendCount = 0;
 
 // Obtener universidad del dominio
 $domain_parts = explode('.', $user['university_domain']);
