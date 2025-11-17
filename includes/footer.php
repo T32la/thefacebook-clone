@@ -8,7 +8,7 @@
             <a href="privacy.php">privacy</a>
         </div>
         <div class="text-center mt-2">
-            a Mark Zuckerberg production<br>
+            a Victoriano Juarez production - UVG<br>
             Thefacebook © <?php echo date('Y'); ?>
         </div>
     </div>
