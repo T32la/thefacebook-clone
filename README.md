@@ -2,6 +2,10 @@
 
 Réplica funcional de la versión original de thefacebook.com (2004) usando PHP, HTML, CSS, JavaScript y MySQL.
 
+## Vista principal
+
+![](src/img/fbs.png)
+
 ## 📋 Características Implementadas
 
 ✅ **Registro de usuarios**
@@ -136,7 +140,7 @@ http://localhost/thefacebook
 
 ## 🌐 Despliegue en Hosting Gratuito
 
-### Opciones Recomendadas
+### Opcion Recomendado
 
 #### 1. InfinityFree (Recomendado)
 
@@ -153,17 +157,6 @@ http://localhost/thefacebook
 4. Crear base de datos en cPanel
 5. Importar `thefacebook.sql`
 6. Editar `config.php` con credenciales del hosting
-
-#### 2. 000webhost
-
-- URL: https://www.000webhost.com
-- PHP 7.4, MySQL, 300MB
-- Subdominio gratuito
-
-#### 3. FreeHosting.com
-
-- PHP 8.0, MySQL
-- 10GB espacio
 
 ### Configuración para Producción
 
@@ -208,13 +201,13 @@ VALUES ('tu-universidad.edu', 'Nombre Universidad');
 
 ## 🔐 Seguridad
 
-⚠️ **IMPORTANTE:** Este proyecto almacena contraseñas en texto plano como se solicitó en los requisitos. **NO usar en producción real.**
+⚠️ **IMPORTANTE:** Este proyecto almacena contraseñas en texto plano como requisito.
 
 Para uso real, implementar:
 
 - `password_hash()` y `password_verify()`
 - Validación CSRF
-- Prepared statements (ya implementado)
+- Prepared statements
 - HTTPS
 
 ## 📝 Notas de Desarrollo
@@ -290,7 +283,7 @@ Este es un proyecto académico. Para agregar mejoras:
 
 Para dudas sobre el proyecto, contactar a:
 
-- [Tu nombre] - [tu.email@uvg.edu.gt]
+- Victoriano Juarez jua2451952@uvg.edu.gt
 
 ---
 
