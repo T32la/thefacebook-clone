@@ -17,16 +17,12 @@
                 <nav class="header-navbar">
                     <a href="index.php">home</a>
                     <a href="search.php">search</a>
-                    <a href="global.php">global</a>
-                    <a href="network.php">social net</a>
-                    <a href="invite.php">invite</a>
-                    <a href="faq.php">faq</a>
+                    <a href="about.php">about</a>
                     <?php if (isLoggedIn()): ?>
                         <a href="logout.php">logout</a>
-                    <?php else: ?>
-                        <a href="login.php">login</a>
-                        <a href="register.php">register</a>
-                        <a href="about.php">about</a>
+                        <?php else: ?>
+                            <a href="login.php">login</a>
+                            <a href="register.php">register</a>
                     <?php endif; ?>
                 </nav>
                 

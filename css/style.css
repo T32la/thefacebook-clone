@@ -34,6 +34,13 @@ body {
     color: white;
 }
 
+.header-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 11px;
+}
+
 .header-nav a {
     color: white;
     text-decoration: none;
@@ -42,6 +49,7 @@ body {
 }
 
 .header-nav a:hover {
+    color: white;
     text-decoration: underline;
 }
 
@@ -62,7 +70,7 @@ body {
 
 /* Sidebar */
 .sidebar-box, .login-sidebar {
-    background-color: #f0f0f0;
+    background-color: transparent;
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 20px;
@@ -92,7 +100,7 @@ body {
 }
 
 .sidebar-box ul li a {
-    color: #3B5998;
+    color: #248adc;
     text-decoration: none;
     font-size: 11px;
 }
@@ -471,6 +479,168 @@ label {
     }
 }
 
+/* TheFacebook Header 2004 */
+.thefacebook-header {
+    background-color: #3b5998;
+    padding: 8px 15px;
+    border-bottom: 2px solid #2d4373;
+    position: relative;
+}
 
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+/* Left - Face Icon */
+.header-left {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
 
+.header-face-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Center - Logo and Nav */
+.header-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    color: #248adc;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    padding-right: 20px;
+    font-family: 'Tahoma', 'Verdana', sans-serif;
+    white-space: nowrap;
+}
+
+.header-main-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header-main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: 'Tahoma', 'Verdana', sans-serif;
+    transition: opacity 0.2s;
+}
+
+.header-main-nav a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* Right - User Info or Auth Links */
+.header-right {
+    flex: 0 0 auto;
+    text-align: right;
+}
+
+.header-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header-user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.header-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
+.header-username {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Tahoma', 'Verdana', sans-serif;
+}
+
+.header-user-link:hover .header-username {
+    text-decoration: underline;
+}
+
+/* Auth Navigation (login/register/about) */
+.header-auth-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.header-auth-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: 'Tahoma', 'Verdana', sans-serif;
+}
+
+.header-auth-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .header-center {
+        flex: 1 1 100%;
+        order: 2;
+        margin-top: 8px;
+        justify-content: center;
+    }
+    
+    .header-logo {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+    
+    .header-main-nav {
+        gap: 8px;
+    }
+    
+    .header-main-nav a {
+        font-size: 10px;
+    }
+    
+    .header-right {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .header-logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+        padding-right: 0;
+    }
+    
+    .header-center {
+        flex-direction: column;
+    }
+}
