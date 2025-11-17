@@ -506,6 +506,10 @@ label {
     height: 40px;
     display: block;
 }
+.header-face-photo {
+    width: 400px;
+    height: 80px;
+}
 
 /* Center - Logo and Nav */
 .header-center {

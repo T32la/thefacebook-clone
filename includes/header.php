@@ -2,7 +2,7 @@
     <div class="header-container">
         <!-- Columna Izquierda: Foto del creador -->
         <div class="header-left-column">
-            <img src="src/img/fb.jpg" alt="thefacebook" class="header-face-photo">
+            <img src="src/img/creador.jpg" alt="thefacebook" class="header-face-photo">
         </div>
         
         <!-- Columna Derecha: Logo + Navbar -->

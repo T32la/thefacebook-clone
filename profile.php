@@ -49,10 +49,10 @@ $conn->close();
                     <ul class="list-unstyled">
                         <li><a href="home.php">My Profile [ edit ]</a></li>
                         <li><a href="friends.php">My Friends</a></li>
-                        <li><a href="parties.php">My Parties</a></li>
-                        <li><a href="messages.php">My Messages</a></li>
-                        <li><a href="account.php">My Account</a></li>
-                        <li><a href="privacy.php">My Privacy</a></li>
+                        <li><a href="edit.php">My Account</a></li>
+                        <li><a href="#" class="nav-disabled" onclick="return false;" title="My Parties">My Parties</a></li>
+                        <li><a href="#" class="nav-disabled" onclick="return false;" title="My Messages">My Messages</a></li>
+                        <li><a href="#" class="nav-disabled" onclick="return false;" title="">My Privacy</a></li>
                     </ul>
                 </div>
             </div>

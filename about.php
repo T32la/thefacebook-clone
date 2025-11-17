@@ -34,38 +34,13 @@ require_once 'config.php';
                         <div class="creator-card">
                             <div class="row">
                                 <div class="col-md-3 text-center">
-                                    <img src="uploads/creator1.jpg" alt="Creator 1" class="creator-img">
+                                    <img src="./src/img/victor.png" alt="Creador Vic" class="creator-img">
                                 </div>
                                 <div class="col-md-9">
-                                    <h5 class="text-primary">Tu Nombre</h5>
-                                    <p><strong>Founder, Master and Commander, Enemy of the State.</strong></p>
-                                    <p>Estudiante de Ingeniería en Ciencias de la Computación. Desarrollador full-stack apasionado por crear aplicaciones web innovadoras.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="creator-card">
-                            <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <img src="uploads/creator2.jpg" alt="Creator 2" class="creator-img">
-                                </div>
-                                <div class="col-md-9">
-                                    <h5 class="text-primary">Compañero 1</h5>
-                                    <p><strong>Business Stuff, Corporate Stuff, Brazilian Affairs.</strong></p>
-                                    <p>Encargado de la lógica de negocio y diseño de base de datos. Especialista en PHP y MySQL.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="creator-card">
-                            <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <img src="uploads/creator3.jpg" alt="Creator 3" class="creator-img">
-                                </div>
-                                <div class="col-md-9">
-                                    <h5 class="text-primary">Compañero 2</h5>
-                                    <p><strong>Graphic Art, General Rockstar.</strong></p>
-                                    <p>Diseñador UI/UX del proyecto. Responsable del diseño visual y la experiencia de usuario.</p>
+                                    <h5 class="text-primary">Juarez, Victoriano</h5>
+                                    <p><strong>Founder, Master and Master Chief in Halo.</strong></p>
+                                    <p>Estudiante del Tecnico Universitario en Informatica UVG - Campus Altiplano. <br>
+                                        Desarrollador full-stack apasionado por crear aplicaciones web innovadoras.</p>
                                 </div>
                             </div>
                         </div>

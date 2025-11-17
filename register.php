@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Email: (harvard)</label>
+                                <label class="col-sm-3 col-form-label">Email: (UVG)</label>
                                 <div class="col-sm-9">
                                     <input type="email" class="form-control" name="email" value="<?php echo $_POST['email'] ?? ''; ?>" required>
                                     <small class="form-text text-muted">Must be a university email (e.g., @uvg.edu.gt)</small>
