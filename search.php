@@ -48,12 +48,7 @@ if (isset($_GET['q']) && !empty($_GET['q'])) {
                 
                 <div class="sidebar-menu mt-3">
                     <ul class="list-unstyled">
-                        <li><a href="home.php">My Profile [ edit ]</a></li>
-                        <li><a href="friends.php">My Friends</a></li>
-                        <li><a href="parties.php">My Parties</a></li>
-                        <li><a href="messages.php">My Messages</a></li>
-                        <li><a href="account.php">My Account</a></li>
-                        <li><a href="privacy.php">My Privacy</a></li>
+                        <?php include 'includes/left-bar.php'; ?>
                     </ul>
                 </div>
             </div>
