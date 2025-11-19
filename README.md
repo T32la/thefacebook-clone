@@ -13,7 +13,7 @@ Réplica funcional de la versión original de thefacebook.com (2004) usando PHP,
 - Validación de correos universitarios (solo dominios .edu)
 - Bloqueo de correos personales (Gmail, Hotmail, Yahoo, etc.)
 - Validación en cliente y servidor
-- Contraseñas en texto plano (como se solicitó)
+- Contraseñas en texto plano
 
 ✅ **Sistema de Login**
 
@@ -34,18 +34,14 @@ Réplica funcional de la versión original de thefacebook.com (2004) usando PHP,
 ✅ **Diseño Retro**
 
 - Basado en capturas históricas de thefacebook
-- Colores azul característico (#3B5998)
+- Colores azul característico (`#3B5998`)
 - Bootstrap 4.6 para responsividad
 
 ## 🗄️ Configuración de Base de Datos
 
 ### 1. Crear la Base de Datos
 
-```bash
-mysql -u root -p < thefacebook.sql
-```
-
-O manualmente:
+Manualmente:
 
 1. Accede a phpMyAdmin o tu gestor MySQL
 2. Crea una base de datos llamada `thefacebook`
@@ -103,7 +99,7 @@ thefacebook/
 
 - PHP 7.4 o superior
 - MySQL 5.7 o superior
-- Apache o Nginx
+- Apache
 
 ### Pasos
 
@@ -142,10 +138,10 @@ http://localhost/thefacebook
 
 ### Opcion Recomendado
 
-#### 1. InfinityFree (Recomendado)
+#### 1. InfinityFree
 
 - URL: https://infinityfree.net
-- PHP 8.0, MySQL, 5GB espacio
+- PHP, MySQL, 5GB espacio
 - Sin anuncios forzados
 - Subdominio gratuito
 
@@ -172,14 +168,6 @@ define('SITE_URL', 'http://tu-sitio.infinityfreeapp.com');
 chmod 755 uploads/
 ```
 
-3. **Crear .htaccess** (opcional):
-
-```apache
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-```
-
 ## 👥 Dominios Universitarios Permitidos
 
 Por defecto, estos dominios están permitidos:
@@ -192,78 +180,20 @@ Por defecto, estos dominios están permitidos:
 - mit.edu
 - stanford.edu
 
-**Para agregar más dominios:**
-
-```sql
-INSERT INTO allowed_domains (domain, university_name)
-VALUES ('tu-universidad.edu', 'Nombre Universidad');
-```
-
-## 🔐 Seguridad
-
-⚠️ **IMPORTANTE:** Este proyecto almacena contraseñas en texto plano como requisito.
-
-Para uso real, implementar:
-
-- `password_hash()` y `password_verify()`
-- Validación CSRF
-- Prepared statements
-- HTTPS
-
-## 📝 Notas de Desarrollo
-
-### Avatar por Defecto
-
-Coloca una imagen `default-avatar.jpg` en `/uploads/`
-
-### Icono del Header
-
-Coloca `face-icon.png` en `/images/` (puede ser una foto de un rostro o el logo)
-
-### Personalizar Creadores
-
-Edita `about.php` y cambia:
-
-- Nombres
-- Fotos (en `/uploads/creator1.jpg`, etc.)
-- Descripciones
-
-## 🐛 Troubleshooting
-
-### Error: "Connection failed"
-
-- Verificar credenciales en `config.php`
-- Verificar que MySQL esté corriendo
-- Verificar que la base de datos existe
-
-### Error: "Call to undefined function mysqli_connect"
-
-- Instalar extensión PHP mysqli: `sudo apt-get install php-mysqli`
-
-### Los uploads no funcionan
-
-- Verificar permisos: `chmod 755 uploads/`
-- Verificar que la carpeta existe
-
-### CSS no carga
-
-- Verificar ruta en los archivos PHP
-- Limpiar caché del navegador
-
 ## 📸 Capturas de Referencia
 
 El diseño está basado en:
 
-- Internet Archive: https://web.archive.org/web/20040212031928/http://www.thefacebook.com/
-- Imágenes históricas de 2004
+- [Internet Archive](https://web.archive.org/web/20040212031928/http://www.thefacebook.com/)
+- [Imágenes históricas de 2004](https://www.webdesignmuseum.org/gallery/facebook-2004)
 
 ## 👨‍💻 Tecnologías Utilizadas
 
 - **Backend:** PHP 7.4+
 - **Base de Datos:** MySQL 5.7+
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Framework CSS:** Bootstrap 4.6
-- **Servidor Web:** Apache/Nginx
+- **Framework CSS:** Bootstrap
+- **Servidor Web:** Apache
 
 ## 📄 Licencia
 
@@ -271,7 +201,7 @@ Proyecto educativo - Universidad del Valle de Guatemala
 
 ## 🤝 Contribuciones
 
-Este es un proyecto académico. Para agregar mejoras:
+Proyecto académico. Para agregar mejoras:
 
 1. Fork el proyecto
 2. Crea una rama (`git checkout -b feature/mejora`)
